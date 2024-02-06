@@ -1,0 +1,14 @@
+<?php
+$servername = 'http://127.0.0.1/';
+$dbname = 'my_database';
+$username = 'root';
+$password = '';
+
+$pdo = new PDO('mysql:host=$servername;dbname=$dbname', $username, $password);
+
+$query = 'INSERT into task_10 (id, text) VALUES (NULL, $_post(text))';
+$conn -> exec($query);
+
+echo "Данные успешно добавлены"; 
+?>
+<a  href="task_10.php"><button>back</button></a>
